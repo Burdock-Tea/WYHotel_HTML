@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--BOOTSTRAP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    
+    <!-- google font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- jquery CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        /* 로고 이미지 */
+        #logo{width: 70px; height: 70px; margin-left: 20px;}
+
+        /* font setting */
+        *{ font-family: 'Noto Sans KR', sans-serif; font-weight: 300;}
+        .nav-link{ font-weight: 400;} /* font 활성화시 폰트 두께*/
+        .box-shodow{ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
+        
+        /* list font hover*/
+        .posi{padding: 80px 0;}
+        .text-secondary:hover { font-weight: 400;}
+        .row > div:nth-child(1) {padding-left: 50px;}
+        .row > div:nth-child(1) > ul li {list-style: none; }
+        
+        /* acod */
+        .list-group-item { border: 0; }
+        .text-secondary { text-decoration: none;}
+
+        /* 문의하기 */
+        .phone_form{ margin: 0;}
+        .btn { border-radius: 0;}
+        .posi-top{ padding-top: 50px;}
+    </style>   
+</head>
+<body>
+    
+    <!-- nav-->
+    <header> <!-- start header -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+                <div class="img-wrapper">
+                    <img src="./img/em_logo.svg" width="100">
+                </div>                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><span class="bi bi-menu-button-wide"></span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav navbar-right">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                호텔소개
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./introduce_hotels.html">개요</a></li>
+                                <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 서울</a></li>
+                                <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 부산</a></li>
+                                <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 제주</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">프로모션</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cscenter_customer.html">고객센터</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./reservations.html">내 예약</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                계정관리
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./member_login.html">로그인</a></li>
+                                <li><a class="dropdown-item" href="./member_join2.html">회원가입</a></li>
+                                <li><a class="dropdown-item" href="./member_myPage.html">마이페이지</a></li>
+                                <li><a class="dropdown-item" href="#">로그아웃</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> <!-- end header -->
+
+    <div class="container posi">
+        <!-- Content here -->
+        <div class="row">
+            <div class="col-1"></div>
+
+            <div class="col-9">
+                <h4>객실정보</h4>
+                <img src="../img/bedroom-g34b59e527_1920.jpg" class="img-fluid" alt="객실사진">
+            </div>
+            
+        </div> <!-- row end-->
+
+        <div class="row posi-top">
+            <div class="col-1"></div>
+
+            <div class="col-4">
+                <!-- 여기는 지도 api가 들어가는 장소입니다 -->
+                <img src="../img/bedroom-g34b59e527_1920.jpg" class="img-fluid" alt="객실사진">
+            </div>
+
+            <div class="col-5">
+                
+                <h4>제주지점</h4>
+                <hr>
+                <!-- 양끝정렬 맞추기 -->
+                <p class="">
+                    모든 국민은 보건에 관하여 국가의 보호를 받는다. 행정각부의 장은 국무위원 중에서 국무총리의 제청으로 대통령이 임명한다. 국회의원이 회기전에 체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다.
+                    대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다. 군인은 현역을 면한 후가 아니면 국무총리로 임명될 수 없다. 대통령·국무총리·국무위원·행정각부의 장·헌법재판소 재판관·법관·중앙선거관리위원회 위원·감사원장·감사위원 기타 법률이 정한 공무원이 그 직무집행에 있어서 헌법이나 법률을 위배한 때에는 국회는 탄핵의 소추를 의결할 수 있다.
+                    국가는 법률이 정하는 바에 의하여 재외국민을 보호할 의무를 진다. 군인·군무원·경찰공무원 기타 법률이 정하는 자가 전투·훈련등 직무집행과 관련하여 받은 손해에 대하여는 법률이 정하는 보상외에 국가 또는 공공단체에 공무원의 직무상 불법행위로 인한 배상은 청구할 수 없다.
+                </p>
+
+                <hr>
+                    <p>
+                        주소
+                    </p>
+                    <p>
+                        대표전화
+                    </p>
+                    <p>
+                        홈페이지
+                    </p>
+                <hr>
+            </div>
+            
+        </div> <!-- row end-->
+        
+    </div>
+
+        
+    
+    
+   
+
+     <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+    
+    </script>
+</body>
+</html>
