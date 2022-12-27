@@ -7,190 +7,97 @@
     <title>Document</title>
 
     <!--BOOTSTRAP CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    
-    <!-- google font CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">   <!-- google font CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- jquery and daterangepicker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
-    <!-- laout -->
-
-    <style>
-        /* 로고 이미지 */
-        #logo{width: 70px; height: 70px; margin-left: 20px;}
-
-        /* font setting */
-        *{ font-family: 'Noto Sans KR', sans-serif; font-weight: 300;}
-        .nav-link{ font-weight: 400;} /* font 활성화시 폰트 두께*/
-        .box-shodow{ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
-
-        /* section : video */
-        .hero{
-            height: 40vh;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(to left,black,transparent);
-        }
-        /* using object-fit */
-        .hero video{
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .hero .heading{color: white;}
-              
-        /* content */
-        .intro{ padding: 80px 0;}
-        
-        /* footer */
-
-        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        input, textarea, button, select {
-            border: none;
-        
-            -webkit-appearance: none;
-            -moz-appearance: none; 
-            appearance: none;   
-        }
-
-        ul, ol, dl, li {
-            list-style: none;
-        }
-        .btn {
-            border-radius: 0px;
-        }
-
-        .clearfix::after {
-            content: '';
-            display: block;
-            clear: both;
-        }
-
-        footer{
-            margin-top: 70px;
-            background: lightgray;
-            padding: 30px 0 15px;
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-        }
-
-        footer .copyright {
-            font-size: 13px;
-            color: #000;
-            line-height: 20px;
-        }
-
-        footer .logo-img {
-            width: 10%;
-            float: right;
-        }
-
-        footer .footer-div {
-            width: 20%;
-            float: right;
-        }
-
-        footer .footer-menu li {
-            display: inline-block;
-            padding: 0 5px;
-        }
-
-        footer .footer-menu li a {
-            color: #000;
-            font-size: 10px;
-        }     
-
-        /* detail titlebox */
-        .titlebox {
-            margin: 50px 0;
-            font-size: 25px;
-            font-weight: bold;
-            text-align: center;
-            border-bottom: 1px solid #999999;
-            padding-bottom: 50px;
-        }
-
-        /* detail joinButton */
-        .joinButton {
-            margin-top: 50px;
-        }
-
-        /* list font hover*/
-        .posi{padding: 80px 0;}
-        .text-secondary:hover { font-weight: 400;}
-        .row > div:nth-child(1) {padding-left: 50px;}
-        .row > div:nth-child(1) > ul li {list-style: none; }
-
-        /* acod */
-        .list-group-item { border: 0; }
-        .text-secondary { text-decoration: none;}
-        
-    </style>   
+    <!-- swiper -->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
 </head>
 <body>
     
-    <!-- nav-->
     <header> <!-- start header -->
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container">
+        <div class="header-wrapper">
+            <div class="contatiner" style="text-align: center;">
                 <div class="img-wrapper">
-                    <img src="./img/em_logo.svg" width="100">
-                </div>                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><span class="bi bi-menu-button-wide"></span></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav navbar-right">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                호텔소개
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./introduce_hotels.html">개요</a></li>
-                                <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 서울</a></li>
-                                <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 부산</a></li>
-                                <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 제주</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">프로모션</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./cscenter_customer.html">고객센터</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./reservations.html">내 예약</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                계정관리
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./member_login.html">로그인</a></li>
-                                <li><a class="dropdown-item" href="./member_join2.html">회원가입</a></li>
-                                <li><a class="dropdown-item" href="./member_myPage.html">마이페이지</a></li>
-                                <li><a class="dropdown-item" href="#">로그아웃</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <img src="./img/em_logo.svg" width="150">
                 </div>
             </div>
-        </nav>
+        </div>        
     </header> <!-- end header -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top"> <!-- start navbar -->         
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><span class="bi bi-menu-button-wide"></span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            호텔소개
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./introduce_hotels.html">개요</a></li>
+                            <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 서울</a></li>
+                            <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 부산</a></li>
+                            <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 제주</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">프로모션</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            고객관리
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">QNA</a></li>
+                            <li><a class="dropdown-item" href="./reservations.html">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            예약관리
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">예약하기</a></li>
+                            <li><a class="dropdown-item" href="./reservations.html">내 예약</a></li>
+                        </ul>
+                    </li>
+                    <!-- 비로그인시 띄워줄 드롭다운 메뉴 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            계정관리
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./member_login.html">로그인</a></li>
+                            <li><a class="dropdown-item" href="./member_join2.html">회원가입</a></li>                                
+                        </ul>
+                    </li>
+                    <!-- 로그인시 띄워줄 드롭다운 메뉴 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            마이페이지
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./member_login.html">맴버쉽</a></li>
+                            <li><a class="dropdown-item" href="./member_join2.html">회원정보수정</a></li>
+                            <li><a class="dropdown-item" href="./member_myPage.html">회원탈퇴</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> <!-- end navbar-->
 
     <!-- 메인영역 각자 할꺼 여기서 부터 적으세용 -->
     <section>
@@ -236,35 +143,30 @@
          </div>   
     </section>
 
+    <!-- footer.jsp 파일 시작 부분-->
     <!-- footer-->
-    <footer>
-        <div class="container">
-        <div class="row">
-         <div class="col-12">
-            <div class="copyright">
-            (주)나는우영 | 대표자: 권우영 | E-mail: info@info.com
-            사업자번호: 123-45-67890 <br>
-             개인정보보호책임자: 권우영 | 
-            주소: 서울특별시 마포구 백범로 23 3층 <span>&copy;WY HOTEL. ALL RIGHTS RESERVED</span>
-          </div>
+    <footer class="sticky-bottom">
+        <div class="container">            
+            <div class="row">
+                <div class="col-6">
+                    <div class="copyright">
+                        (주)나는우영 | 대표자: 권우영 | E-mail: info@info.com
+                        사업자번호: 123-45-67890 <br>
+                         개인정보보호책임자: 권우영 | 
+                        주소: 서울특별시 마포구 백범로 23 3층 <span>&copy;WY HOTEL. ALL RIGHTS RESERVED</span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="logo-img">
+                        <img src="./img/em_logo.svg" width="150">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <a href="#">
-              <img class="logo-img" src="./img/em_logo.svg" alt="로고">
-            </a>
-        <div class="col-md-5 col-sm-12 col-xs-12 footer-div">
-          <ul class="footer-menu">
-            <li><a href="#">고객센터</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보취급방침</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-     <!-- Bootstrap Bundle with Popper -->
+        <a href="#" class="bi bi-arrow-up-circle topBtn"></a>
+    </footer>
+    
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
