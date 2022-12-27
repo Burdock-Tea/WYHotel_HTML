@@ -251,6 +251,12 @@
             right: 40px;
         }
 
+        #modifyBtn, #updateBtn {
+            width: 50%;
+            display: block;
+            margin: 10px auto;
+        }
+
     </style>
 
 
@@ -260,50 +266,43 @@
 <body>
     
     <!-- nav-->
-    <header> <!-- start header -->
-        <nav class="navbar navbar-expand-lg bg-light">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light box-shodow ">
             <div class="container">
-                <div class="img-wrapper">
-                    <img src="./img/em_logo.svg" width="100">
-                </div>                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><span class="bi bi-menu-button-wide"></span></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav navbar-right">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                호텔소개
+                
+                <div class="collapse navbar-collapse" id="navbarColor03">
+                    <!-- logo -->
+                    <a class="navbar-brand" href="#"><img id="logo" src="img/em_logo.svg" alt="logo"></a>
+                    <!-- nav menu -->
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">객실소개
+                                <span class="visually-hidden">(current)</span>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./introduce_hotels.html">개요</a></li>
-                                <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 서울</a></li>
-                                <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 부산</a></li>
-                                <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 제주</a></li>
-                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">프로모션</a>
+                            <a class="nav-link " href="#">프로모션</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./cscenter_customer.html">고객센터</a>
+                            <a class="nav-link" href="#">고객센터</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./reservations.html">내 예약</a>
+                            <a class="nav-link" href="#">내예약</a>
                         </li>
+                        <!-- 드롭다운 이벤트 -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                계정관리
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./member_login.html">로그인</a></li>
-                                <li><a class="dropdown-item" href="./member_join2.html">회원가입</a></li>
-                                <li><a class="dropdown-item" href="./member_myPage.html">마이페이지</a></li>
-                                <li><a class="dropdown-item" href="#">로그아웃</a></li>
-                            </ul>
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">회원메뉴</a>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">로그인</a>
+                            <a class="dropdown-item" href="#">회원가입</a>
+                            </div>
                         </li>
+
                     </ul>
-                </div>
+            </div>
             </div>
         </nav>
     </header> <!-- end header -->
@@ -367,6 +366,15 @@
                                         <td>2박</td>
                                         <td>2022-12-23</td>
                                         <td>2022-12-25</td>
+                                    </tr>
+                                    <tr data-resv-num="221200bnbdm1001">
+                                        <td>221220slsum1001</td>
+                                        <td>WY호텔 부산지점</td>
+                                        <td>Business Delux</td>
+                                        <td>1</td>
+                                        <td>2박</td>
+                                        <td>2022-12-26</td>
+                                        <td>2022-12-27</td>
                                     </tr>
                                 </tbody>
 
@@ -477,12 +485,13 @@
 
                             <tr class="reservationCode">
                                 <td class="col-md-5"><strong>예약번호</strong></td>
-                                <td class="col-md-7"><span><input type="text" value="" name="reservationCode" id="reservationCode" readonly></span></td>
+                                <td class="col-md-7"><input type="text" value="" name="reservationCode" id="reservationCode" readonly></td>
                             </tr>
                             <tr class="hotelCode">
                                 <td class="col-md-5"><strong>예약지점</strong></td>
                                 <td class="col-md-7">
-                                    <select type="text" value="" name="hotelCode" id="hotelCode" class="form-control">
+                                    <select type="text" value="" name="hotelCode" id="hotelCode" class="form-control"
+                                    onFocus="this.initialSelect = this.selectedIndex;" onChange="this.selectedIndex = this.initialSelect;" readonly>
                                         <option value="entire">전체</option>
                                         <option value="sl" selected>WY호텔 서울</option>
                                         <option value="bn">WY호텔 부산</option>
@@ -495,7 +504,8 @@
                             <tr class="roomCode">
                                 <td class="col-md-5"><strong>예약객실</strong></td>
                                 <td class="col-md-7">
-                                    <select name="roomCode" id="roomCode" class="form-control">
+                                    <select name="roomCode" id="roomCode" class="form-control"
+                                    onFocus="this.initialSelect = this.selectedIndex;" onChange="this.selectedIndex = this.initialSelect;" readonly>
                                         <option value="su" selected>Suite</option>
                                         <option value="bd">Business Delux</option>
                                         <option value="bs">Business</option>
@@ -507,7 +517,8 @@
                             <tr class="capacity">
                                 <td class="col-md-5"><strong>인원</strong></td>
                                 <td class="col-md-7">
-                                    <select name="capacity" id="capacity" class="form-control">
+                                    <select name="capacity" id="capacity" class="form-control"
+                                    onFocus="this.initialSelect = this.selectedIndex;" onChange="this.selectedIndex = this.initialSelect;" readonly>
                                         <option>1</option>
                                         <option selected>2</option>
                                         <option>3</option>
@@ -517,22 +528,23 @@
                             </tr>
                             <tr class="nights">
                                 <td class="col-md-5"><strong>투숙일</strong></td>
-                                <td class="col-md-7"><span><input type="text" value="2박" name="nights" id="nights" readonly></span></td>
+                                <td class="col-md-7"><input type="text" value="2박" name="nights" id="nights" readonly></td>
+                                <!-- 계산해서 넣어라 아마 el로..-->
                             </tr>
                             <tr class="checkInDate">
                                 <td class="col-md-5"><strong>체크인</strong></td>
-                                <td class="col-md-7"><span><input type="date" value="2022-12-23" name="checkInDate" id="checkInDate" class="form-control" readonly></span></td>
+                                <td class="col-md-7"><input type="date" value="2022-12-23" name="checkInDate" id="checkInDate" class="form-control" readonly></td>
                             </tr>
                             <tr class="checkOutDate">
                                 <td class="col-md-5"><strong>체크아웃</strong></td>
-                                <td class="col-md-7"><span><input type="date" value="2022-12-25" name="checkOutDate" id="checkOutDate" class="form-control" readonly></span></td>
+                                <td class="col-md-7"><input type="date" value="2022-12-25" name="checkOutDate" id="checkOutDate" class="form-control" readonly></td>
                             </tr>
 
                         </tbody>
 
                     </table>
                     
-                    <button type="button" class="btn bnt-modify btn-dark form-control">예약 변경하기</button>
+                    <button type="button" class="btn bnt-modify btn-dark form-control" id="modifyBtn">예약 변경하기</button>
                     
                 </form>
 
@@ -543,12 +555,13 @@
 
                             <tr class="reservationCode">
                                 <td class="col-md-5"><strong>예약번호</strong></td>
-                                <td class="col-md-7"><span><input type="text" value="" name="reservationCode" id="reservationCode" readonly></span></td>
+                                <td class="col-md-7"><input type="text" value="" name="reservationCode" id="reservationCode" readonly></td>
                             </tr>
                             <tr class="hotelCode">
                                 <td class="col-md-5"><strong>예약지점</strong></td>
                                 <td class="col-md-7">
-                                    <select type="text" value="" name="hotelCode" id="hotelCode" class="form-control">
+                                    <select type="text" value="" name="hotelCode" id="hotelCode" class="form-control"
+                                    onFocus="this.initialSelect = this.selectedIndex;" onChange="this.selectedIndex = this.initialSelect;" readonly>
                                         <option value="entire">전체</option>
                                         <option value="sl" selected>WY호텔 서울</option>
                                         <option value="bn">WY호텔 부산</option>
@@ -560,7 +573,8 @@
                             <tr class="reservationAmount">
                                 <td class="col-md-5"><strong>인원</strong></td>
                                 <td class="col-md-7">
-                                    <select name="reservationAmount" id="reservationAmount" class="form-control">
+                                    <select name="reservationAmount" id="reservationAmount" class="form-control"
+                                    onFocus="this.initialSelect = this.selectedIndex;" onChange="this.selectedIndex = this.initialSelect;" readonly>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -575,7 +589,8 @@
                             <tr class="resCode">
                                 <td class="col-md-5"><strong>다이닝 선택</strong></td>
                                 <td class="col-md-7">
-                                    <select name="resCode" id="resCode" class="form-control">
+                                    <select name="resCode" id="resCode" class="form-control"
+                                    onFocus="this.initialSelect = this.selectedIndex;" onChange="this.selectedIndex = this.initialSelect;" readonly>
                                         <option value="s1">별론데 비싼 다이닝</option>
                                         <option value="s2">적당히 맛있고 싼 다이닝</option>
                                         <option value="s3" selected>죤맛탱 다이닝</option>
@@ -586,11 +601,11 @@
                             </tr>
                             <tr class="reservationTime">
                                 <td class="col-md-5"><strong>예약시간</strong></td>
-                                <td class="col-md-7"><span><input type="text" value="17:30" name="reservationTime" id="reservationTime" class="form-control" readonly></span></td>
+                                <td class="col-md-7"><input type="text" value="17:30" name="reservationTime" id="reservationTime" class="form-control" readonly></td>
                             </tr>
                             <tr class="reservationDate">
                                 <td class="col-md-5"><strong>예약일</strong></td>
-                                <td class="col-md-7"><span><input type="date" value="2022-12-25" name="reservationDate" id="reservationDate" class="form-control" readonly></span></td>
+                                <td class="col-md-7"><input type="date" value="2022-12-25" name="reservationDate" id="reservationDate" class="form-control" readonly></td>
                             </tr>
 
 
@@ -598,7 +613,7 @@
 
                     </table>
                     
-                    <button type="button" class="btn bnt-modify btn-dark form-control">예약 변경하기</button>
+                    <button type="button" class="btn bnt-modify btn-dark form-control" id="modifyBtn">예약 변경하기</button>
                     
                 </form>
 
@@ -643,6 +658,39 @@
                 $('#reservationModal').modal('show');
 
             });// 다이닝 예약확인 버튼처리 끝
+
+            // 예약변경버튼
+            $('#reservationModal').on('click', '#modifyBtn', function(){
+                const trs = [...$(this)[0].parentNode.children[0].children[0].children];
+                trs.forEach(tr => {
+                    const $inp = tr.children[1].firstElementChild;
+                    if ($inp.getAttribute('id') !== 'reservationCode' && $inp.getAttribute('id') !== 'hotelCode')
+                        $inp.removeAttribute('readonly');
+                    if ($inp.matches('select') && $inp.getAttribute('id') !== 'hotelCode') {
+                        $inp.removeAttribute('onFocus');
+                        $inp.removeAttribute('onChange');
+                    }
+                });
+                $(this).text('변경사항 저장');
+                $(this).attr('id', 'updateBtn');
+            }); //예약변경버튼 종료
+
+            // 변경사항 저장 버튼 클릭이벤트
+            $('#reservationModal').on('click', '#updateBtn', function(){
+                const trs = [...$(this)[0].parentNode.children[0].children[0].children];
+                trs.forEach(tr => {
+                    const $inp = tr.children[1].firstElementChild;
+                    if ($inp.getAttribute('id') !== 'reservationCode' && $inp.getAttribute('id') !== 'hotelCode')
+                        $inp.setAttribute('readonly', true);
+                    if ($inp.matches('select') && $inp.getAttribute('id') !== 'hotelCode') {
+                        $inp.setAttribute('onFocus', 'this.initialSelect = this.selectedIndex;');
+                        $inp.setAttribute('onChange', 'this.selectedIndex = this.initialSelect;');
+                    }
+                });
+
+                $(this).text('예약 변경하기');
+                $(this).attr('id', 'modifyBtn');
+            });
             
         });
         
@@ -651,8 +699,6 @@
 
      <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
 
 </body>
