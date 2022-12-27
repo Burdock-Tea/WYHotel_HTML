@@ -110,38 +110,63 @@
         footer .footer-menu li a {
             color: #000;
             font-size: 10px;
-        } 
+        }     
+
+        /* 여기부터 */
         .join-in {
-            width: 90%;
-            height: 300px;
+            width: 88%;
+            height: 180px;
             border-top: 2px solid lightgray;
             border-bottom:  2px solid lightgray;
             margin: 0 auto;
-            text-align: center;
-            padding: 50px;
-            padding-top: 90px;
+            padding: 10px;
+            text-align: left;
+            overflow: auto;
+           
         }   
         section {
             padding: 70px;
         } 
         section h3 {
-            margin-left: 50px;
+            margin-left: 70px;
         }
         section p {
-            margin-left: 50px;
+            margin-left: 70px;
         }
         .join-in button{
-            display: block;
-            margin: 0 auto;
             border-radius: 3px;
-            width: 50%;
+            width: 17%;
             height: 25%;
-            margin-top: 30px;
         }
-
+        .checkbox {
+            padding: 10px;
+            margin-left: 88%;
+        }
         .join-in p{
-            margin: 0 auto 5px;
+            margin-left: 15px;
         }
+        #loginForm{
+            margin-left: 100px;
+            line-height: 20px;
+        }
+        #loginForm  input{
+            width: 60%;
+            text-align: left;
+            
+        }
+        .joinButton{
+            text-align: center;
+            margin: 0 auto;
+            padding-top:  30px;
+            margin-top: 50px;
+        }    
+        .joinButton button{
+            width: 30%;
+            border: 1px solid black;
+        }
+        #addrForm{width: 30%;}
+        #addrForm button{background-color: black;}
+        .select{width: 200px;}
     </style>   
 </head>
 <body>
@@ -197,22 +222,81 @@
 
     <!-- 메인영역 각자 할꺼 여기서 부터 적으세용 -->
     <section>
-       <div class="container">
-        <div class="row">
- 
-                <div>
-                    <h3>회원가입 페이지</h3>  <br>
-                    <p>hotel에 오신것을 환영합니다.</p>
-                </div>
+       <div class="container"> 
+         <div class="row">
+        <div>
+            <h3>약관동의 및 회원정보 입력</h3>  <br>
+            <p>wy 호텔에 오신 것을 환영합니다. 대충 약관 끄적끄적</p>
+        </div>
+        <div class="">
+        <div class="join-in form-label">
+            <p>길을 할지라도 때까지 열락의 구하기 전인 시들어 운다. 청춘은 위하여서, 능히 말이다. 풀이 그들의 돋고, 얼마나 있음으로써 안고, 가는 없는 황금시대다. 노래하며 얼마나 피부가 피고, 소금이라 우리 못할 불어 눈이 것이다. 있을 황금시대의 영원히 보라. 안고, 예가 그들의 품에 끓는 어디 그러므로 듣는다. 천자만홍이 설산에서 그들의 같은 살았으며, 바로 위하여서 부패뿐이다. 것은 청춘의 청춘 위하여서. 위하여서, 사랑의 못할 있는 아니한 목숨이 피다. 그들의 듣기만 품었기 있는 구하기 칼이다. 산야에 별과 내려온 우리 피가 우리는 보라.
 
-                <div class="join-in">
-                    <p><strong>회원가입을 하시려면 본인인증이 필요합니다.</strong></p> 
-                    <p>이메일 인증/혹은 sns 인증 해보러 가보자</p> 
-                    <button type="button" class="btn btn-dark form-control">회원 가입</button>
+                생명을 같으며, 속에 뿐이다. 반짝이는 따뜻한 끓는 같지 뼈 그들은 피다. 들어 때에, 이상, 거선의 설레는 못할 생의 타오르고 착목한는 철환하였는가? 사랑의 끓는 구할 풍부하게 천하를 봄바람이다. 청춘은 만천하의 너의 천지는 심장은 이것이다. 이 되려니와, 얼마나 뿐이다. 꽃이 우리의 찾아 들어 피고, 것이다. 있음으로써 봄날의 인간이 튼튼하며, 못할 심장의 피고, 무한한 봄바람이다. 이상의 얼마나 안고, 봄바람이다.
+            </p> 
+        </div>
+        </div>
+        <div class="row"> 
+            <div class="checkbox">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" >
+            <label class="form-check-label" for="flexSwitchCheckChecked"> 약관동의 </label>
+            </div>   
+            <!-- 로그인 시작 -->
+            <form id="loginForm">
+                  <div class="form-group">
+                    <label for="inputEmail" class="form-label mt-4">이메일을 입력하세요</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="example@gmail.com">
                 </div>
-       
+                <div class="form-group">
+                  <label for="inputPassword" class="form-label mt-4">Password</label>
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="inputName" class="form-label mt-4">이름</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="이름을 입력해주세요.">
+                </div>
+               
+                  <!-- https://juein.tistory.com/43 << 이런 방식도 있던데 이건 어때요? -->
+                <label class="col-form-label mt-4" for="inputDefault">전화번호</label>
+                <div class="form-group">
+                    <div class="d-inline-flex">
+                        <select class="form-select select">
+                            <option>010</option>
+                            <option>011</option>
+                            <option>018</option>
+                        </select>
+                       - <input type="number" class="form-control" size="6" placeholder="0000" id="inputDefault">
+                       - <input type="number" class="form-control" size="6" placeholder="0000" id="inputDefault">
+                    </div>
+
+                </div>    
+          
+                <div class="form-group">
+                    <label for="inputPhoneNumber" class="form-label mt-4">주소</label>
+                    <div class="input-group" id="addrForm">
+                        <input type="text" name="addrZipNum" class="form-control" id="addrZipNum" placeholder="우편번호" readonly>
+                        <div class="input-group-addon">
+                            <button type="button" class="btn btn-primary">주소찾기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="addrBasic" class="form-control" id="addrBasic" placeholder="기본주소">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="addrDetail" class="form-control" id="addrDetail" placeholder="상세주소">
+                </div>
+                      
+                    
+            </form>
+                <div class="joinButton">
+                    <button type="button" class="btn btn-light">취소</button> &nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-dark">회원가입</button>
+                </div>
             </div>
-        </div> 
+        </div>
+            </div>
+         </div>   
     </section>
 
     <!-- footer-->

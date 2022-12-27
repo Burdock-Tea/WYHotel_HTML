@@ -17,7 +17,7 @@
 
     <style>
         /* 로고 이미지 */
-        #logo{width: 70px; height: 70px; margin-left: 20px;}
+        #logo{ width: 70px; height: 70px; margin-left: 20px; }
 
         /* font setting */
         *{ font-family: 'Noto Sans KR', sans-serif; font-weight: 300;}
@@ -73,11 +73,17 @@
             border-radius: 0px;
         }
 
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
         footer{
             margin-top: 70px;
             background: lightgray;
             padding: 30px 0 15px;
-            position: relative;
+
         }
 
         footer .copyright {
@@ -104,9 +110,9 @@
         footer .footer-menu li a {
             color: #000;
             font-size: 10px;
-        }
+        }     
 
-        /* delete titlebox */
+        /* detail titlebox */
         .titlebox {
             margin: 50px 0;
             font-size: 25px;
@@ -116,16 +122,21 @@
             padding-bottom: 50px;
         }
 
-        /* delete deleteBtn */
-        .deleteBtn {
-            color: #ffffff;
-            font-size: 12px;
-        }
+        /* detail joinButton */
+        .joinButton { margin-top: 50px; }
 
-        /* delete delete-input */
-        .delete-input {
-            margin: 50px 0;
-        }
+        /* list font hover*/
+        .posi{padding: 80px 0;}
+        .text-secondary:hover { font-weight: 400;}
+        .row > div:nth-child(1) { padding-left: 50px; }
+        .row > div:nth-child(1) > ul li { list-style: none; }
+
+        /* acod */
+        .list-group-item { border: 0; }
+        .text-secondary { text-decoration: none; }
+
+        /* deleteBtn */
+        .deleteBtn {color: white;}
 
     </style>   
 </head>
@@ -181,46 +192,63 @@
     </header> <!-- end header -->
 
     <!-- 메인영역 각자 할꺼 여기서 부터 적으세용 -->
-    <div class="container ">
-        <div class="row">
-            <div class="titlebox">
-                회원 탈퇴
+    <section>
+       <div class="container"> 
+         <div class="row">
+        <div class="titlebox">
+            회원 탈퇴
+        </div>
+        <div class="row"> 
+            <!-- 목록 -->
+            <div class="col-3">
+                <ul class="list-group col-12">
+                    <li class="list-group"><h4>마이페이지</h4></li>
+                    <hr>
+                    <li class="list-group-item"> <a href="./member_modify.html" class="text-secondary">내정보 수정</a></li>
+                    <li class="list-group-item"> <a href="./member_Pwmodify.html" class="text-secondary">비밀번호 수정</a></li>
+                    <li class="list-group-item"> <a href="./member_delete.html" class="text-secondary">회원탈퇴</a></li>
+                </ul>
             </div>
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4">
-                <div class="input-group mb-3 delete-input">
-                    <input type="password" class="form-control" placeholder="비밀번호를 입력하세요." aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary btn-dark deleteBtn" type="button" id="button-addon2">확인</button>
-                </div>
+            
+            <div class="col-lg-1"></div>
+            <div class="col-lg-6 align-self-center">
+                <form id="loginForm" class="">
+                    <div class="input-group mb-3 delete-input">
+                        <input type="password" class="form-control" placeholder="비밀번호를 입력하세요." aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary btn-dark deleteBtn" type="button" id="button-addon2">확인</button>
+                    </div>
+                </form>
+            </div>            
             </div>
         </div>
-    </div>
+            </div>
+         </div>   
+    </section>
 
     <!-- footer-->
     <footer>
         <div class="container">
-          <div class="row">
-            <div class="col-lg-12 col-md-7 col-sm-12 col-12">
-                <div class="copyright col-lg-12 col-md-7 col-sm-12 col-12">
-                (주)나는우영 | 대표자: 권우영 | E-mail: info@info.com
-                사업자번호: 123-45-67890 <br>
-                개인정보보호책임자: 권우영 | 
-                주소: 서울특별시 마포구 백범로 23 3층 <span>&copy;WY HOTEL. ALL RIGHTS RESERVED</span>
-                </div>
-            </div>
-            <div>
-                <a href="#">
-                <img class="logo-img" src="./img/em_logo.svg" alt="로고">
-                </a>
-            <div class=" col-lg-12 col-md-5 col-sm-12 col-12 footer-div">
-            <ul class="footer-menu">
-                <li><a href="#">고객센터</a></li>
-                <li><a href="#">이용약관</a></li>
-                <li><a href="#">개인정보취급방침</a></li>
-            </ul>
-            </div>
+        <div class="row">
+         <div class="col-12">
+            <div class="copyright">
+            (주)나는우영 | 대표자: 권우영 | E-mail: info@info.com
+            사업자번호: 123-45-67890 <br>
+             개인정보보호책임자: 권우영 | 
+            주소: 서울특별시 마포구 백범로 23 3층 <span>&copy;WY HOTEL. ALL RIGHTS RESERVED</span>
           </div>
         </div>
+        <div>
+            <a href="#">
+              <img class="logo-img" src="./img/em_logo.svg" alt="로고">
+            </a>
+        <div class="col-md-5 col-sm-12 col-xs-12 footer-div">
+          <ul class="footer-menu">
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보취급방침</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 

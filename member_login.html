@@ -113,14 +113,14 @@
         }     
         /* login titlebox */
         .titlebox{ 
-            margin-top: 15px;
+            margin-top: 80px;
             font-size: 25px;
             font-weight: bold;
         }
 
         /* login titlebox2 */
         .titlebox2 {
-            margin-bottom: 10px;
+            margin-bottom: 30px;
             font-size: 12px;
         }
 
@@ -131,9 +131,10 @@
 
         /* login id-pw-search */
         .id-pw-search {
-            float: right;
             color: black;
-            text-decoration: none;
+            float: right;
+            font-size: 13px;
+            line-height: 30px;
         }
 
         .id-pw-search:hover {
@@ -165,6 +166,7 @@
         /* login form-check */
         .form-check {
             font-size: 13px;
+            display: inline-block;
         }
 
         /* login userLogin-btn */
@@ -255,12 +257,18 @@
                                 <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="비밀번호">
                             </div>
                             <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  아이디 저장
+                                </label>
+                              </div>  &nbsp;&nbsp;
+                            <div class="form-check auto-login clearfix">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                                 <label class="form-check-label" for="flexCheckChecked">
-                                    아이디 저장
+                                    자동 로그인
                                 </label>
-                                <a href="#" class="id-pw-search">아이디/비밀번호 찾기 ▶</a>
                             </div>
+                            <a href="#" class="id-pw-search">아이디/비밀번호 찾기 ▶</a>
                                 <div class="d-grid gap-2 login-btn">
                                     <button type="button" class="btn btn-dark userLogin-btn"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">로그인</font></font></button>
                                     <button type="button" class="btn btn-secondary userLogin-btn"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">회원가입</font></font></button>

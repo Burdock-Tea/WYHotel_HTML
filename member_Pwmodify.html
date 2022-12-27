@@ -83,7 +83,9 @@
             margin-top: 70px;
             background: lightgray;
             padding: 30px 0 15px;
-            position: relative;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
         }
 
         footer .copyright {
@@ -112,58 +114,30 @@
             font-size: 10px;
         }     
 
-        /* 여기부터 */
-        .join-in {
-            width: 88%;
-            height: 180px;
-            border-top: 2px solid lightgray;
-            border-bottom:  2px solid lightgray;
-            margin: 0 auto;
-            padding: 10px;
-            text-align: left;
-            overflow: auto;
-           
-        }   
-        section {
-            padding: 70px;
-        } 
-        section h3 {
-            margin-left: 70px;
-        }
-        section p {
-            margin-left: 70px;
-        }
-        .join-in button{
-            border-radius: 3px;
-            width: 17%;
-            height: 25%;
-        }
-        .checkbox {
-            padding: 10px;
-            margin-left: 88%;
-        }
-        .join-in p{
-            margin-left: 15px;
-        }
-        #loginForm{
-            margin-left: 100px;
-            line-height: 20px;
-        }
-        #loginForm  input{
-            width: 60%;
-            text-align: left;
-            
-        }
-        .joinButton{
+        /* detail titlebox */
+        .titlebox {
+            margin: 50px 0;
+            font-size: 25px;
+            font-weight: bold;
             text-align: center;
-            margin: 0 auto;
-            padding-top:  30px;
+            border-bottom: 1px solid #999999;
+            padding-bottom: 50px;
+        }
+
+        /* detail joinButton */
+        .joinButton {
             margin-top: 50px;
-        }    
-        .joinButton button{
-            width: 30%;
-            border: 1px solid black;
-        }   
+        }
+
+        /* list font hover*/
+        .posi{padding: 80px 0;}
+        .text-secondary:hover { font-weight: 400;}
+        .row > div:nth-child(1) {padding-left: 50px;}
+        .row > div:nth-child(1) > ul li {list-style: none; }
+
+        /* acod */
+        .list-group-item { border: 0; }
+        .text-secondary { text-decoration: none;}
         
     </style>   
 </head>
@@ -222,46 +196,40 @@
     <section>
        <div class="container"> 
          <div class="row">
-        <div>
-            <h3>약관동의 및 회원정보 입력</h3>  <br>
-            <p>wy 호텔에 오신 것을 환영합니다. 대충 약관 끄적끄적</p>
-        </div>
-        <div class="">
-        <div class="join-in form-label">
-            <p>길을 할지라도 때까지 열락의 구하기 전인 시들어 운다. 청춘은 위하여서, 능히 말이다. 풀이 그들의 돋고, 얼마나 있음으로써 안고, 가는 없는 황금시대다. 노래하며 얼마나 피부가 피고, 소금이라 우리 못할 불어 눈이 것이다. 있을 황금시대의 영원히 보라. 안고, 예가 그들의 품에 끓는 어디 그러므로 듣는다. 천자만홍이 설산에서 그들의 같은 살았으며, 바로 위하여서 부패뿐이다. 것은 청춘의 청춘 위하여서. 위하여서, 사랑의 못할 있는 아니한 목숨이 피다. 그들의 듣기만 품었기 있는 구하기 칼이다. 산야에 별과 내려온 우리 피가 우리는 보라.
-
-                생명을 같으며, 속에 뿐이다. 반짝이는 따뜻한 끓는 같지 뼈 그들은 피다. 들어 때에, 이상, 거선의 설레는 못할 생의 타오르고 착목한는 철환하였는가? 사랑의 끓는 구할 풍부하게 천하를 봄바람이다. 청춘은 만천하의 너의 천지는 심장은 이것이다. 이 되려니와, 얼마나 뿐이다. 꽃이 우리의 찾아 들어 피고, 것이다. 있음으로써 봄날의 인간이 튼튼하며, 못할 심장의 피고, 무한한 봄바람이다. 이상의 얼마나 안고, 봄바람이다.
-            </p> 
-        </div>
+        <div class="titlebox">
+            비밀번호 수정
         </div>
         <div class="row"> 
-            <div class="checkbox">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" >
-            <label class="form-check-label" for="flexSwitchCheckChecked"> 약관동의 </label>
-            </div>   
-            <form id="loginForm">
-                                 
-                  <div class="form-group">
-                    <label for="inputEmail" class="form-label mt-4">이메일을 입력하세요</label>
-                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="example@gmail.com">
+            <!-- 목록 -->
+        <div class="col-3">
+            <ul class="list-group col-12">
+                <li class="list-group"><h4>마이페이지</h4></li>
+                <hr>
+                <li class="list-group-item"> <a href="./member_modify.html" class="text-secondary">내정보 수정</a></li>
+                <li class="list-group-item"> <a href="./member_Pwmodify.html" class="text-secondary">비밀번호 수정</a></li>
+                <li class="list-group-item"> <a href="./member_delete.html" class="text-secondary">회원탈퇴</a></li>
+            </ul>
+        </div>
+            
+            <div class="col-lg-1"></div>
+            <form id="loginForm" class="col-lg-6">
+                <div class="form-group col-12">
+                    <label for="inputPassword" class="form-label mt-4">현재 비밀번호</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                  </div>
+                  <div class="form-group col-12">
+                      <label for="inputPassword" class="form-label mt-4">변경 할 비밀번호</label>
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                  </div>
+                  <div class="form-group col-12">
+                      <label for="inputPassword" class="form-label mt-4">비밀번호 확인</label>
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                  </div>
+            
+                <div class="joinButton col-12">
+                    <button type="button" class="btn btn-light col-6">취소</button><button type="button" class="btn btn-dark col-6">정보 수정</button>
                 </div>
-                <div class="form-group">
-                  <label for="inputPassword" class="form-label mt-4">Password</label>
-                  <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <label for="inputName" class="form-label mt-4">이름</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="이름을 입력해주세요.">
-                </div>
-                <div class="form-group">
-                    <label for="inputPhoneNumber" class="form-label mt-4">전화번호</label>
-                    <input type="text" class="form-control" id="inputPhoneNumber" placeholder="example 010-0000-0000">
-                </div>     
             </form>
-                <div class="joinButton">
-                    <button type="button" class="btn btn-light">취소</button> &nbsp;&nbsp;&nbsp;
-                    <button type="button" class="btn btn-dark">회원가입</button>
-                </div>
             </div>
         </div>
             </div>
@@ -272,7 +240,7 @@
     <footer>
         <div class="container">
         <div class="row">
-         <div class="col-md-7 col-sm-12 col-xs-12">
+         <div class="col-12">
             <div class="copyright">
             (주)나는우영 | 대표자: 권우영 | E-mail: info@info.com
             사업자번호: 123-45-67890 <br>

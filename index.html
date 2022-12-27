@@ -21,80 +21,86 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/main.css"/>
 </head>
-<body>    
+<body class="posi">    
     <header> <!-- start header -->
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container">
+        <div class="header-wrapper">
+            <div class="contatiner" style="text-align: center;">
                 <div class="img-wrapper">
-                    <img src="./img/em_logo.svg" width="100">
-                </div>                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><span class="bi bi-menu-button-wide"></span></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav navbar-right">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                호텔소개
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./introduce_hotels.html">개요</a></li>
-                                <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 서울</a></li>
-                                <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 부산</a></li>
-                                <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 제주</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">프로모션</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                고객관리
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">QNA</a></li>
-                                <li><a class="dropdown-item" href="./reservations.html">문의하기</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                예약관리
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">예약하기</a></li>
-                                <li><a class="dropdown-item" href="./reservations.html">내 예약</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                계정관리
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./member_login.html">로그인</a></li>
-                                <li><a class="dropdown-item" href="./member_join2.html">회원가입</a></li>
-                                <li><a class="dropdown-item" href="./member_myPage.html">마이페이지</a></li>
-                                <li><a class="dropdown-item" href="#">로그아웃</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                마이페이지
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./member_login.html">맴버쉽</a></li>
-                                <li><a class="dropdown-item" href="./member_join2.html">회원정보수정</a></li>
-                                <li><a class="dropdown-item" href="./member_myPage.html">회원탈퇴</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <img src="./img/em_logo.svg" width="150">
                 </div>
             </div>
-        </nav>
+        </div>        
     </header> <!-- end header -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top"> <!-- start navbar -->         
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><span class="bi bi-menu-button-wide"></span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            호텔소개
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./introduce_hotels.html">개요</a></li>
+                            <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 서울</a></li>
+                            <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 부산</a></li>
+                            <li><a class="dropdown-item" href="./introduce_hotels.html">WY호텔 제주</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">프로모션</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            고객관리
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">QNA</a></li>
+                            <li><a class="dropdown-item" href="./reservations.html">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            예약관리
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">예약하기</a></li>
+                            <li><a class="dropdown-item" href="./reservations.html">내 예약</a></li>
+                        </ul>
+                    </li>
+                    <!-- 비로그인시 띄워줄 드롭다운 메뉴 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            계정관리
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./member_login.html">로그인</a></li>
+                            <li><a class="dropdown-item" href="./member_join2.html">회원가입</a></li>                                
+                        </ul>
+                    </li>
+                    <!-- 로그인시 띄워줄 드롭다운 메뉴 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            마이페이지
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./member_login.html">맴버쉽</a></li>
+                            <li><a class="dropdown-item" href="./member_join2.html">회원정보수정</a></li>
+                            <li><a class="dropdown-item" href="./member_myPage.html">회원탈퇴</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> <!-- end navbar-->
+    <!-- jsp 생성시 위까지가 header.jsp로 진행 -->
 
-    <!-- 메인영역 각자 할꺼 여기서 부터 적으세용 -->
     <section class="main"> <!-- start main -->
-        <div class="wrap"> <!-- start video -->
+        <div class="wrapper"> <!-- start video -->
             <section class="hero">
                 <div class="heading">
                     <p>
@@ -105,31 +111,22 @@
             </section>
         </div> <!-- end video -->
 
-        <hr>
-
-        <div class="container"> <!-- start fastreservations -->
+        <div class="container wrapper"> <!-- start fastreservations -->
+            <h3>빠른예약</h3>
             <form>
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">예약</th>
-                            <th scope="col">지점선택</th>
-                            <th scope="col">인원</th>
-                            <th scope="col">연령선택</th>                            
-                            <th scope="col">날짜검색</th>                            
-                            <th scope="col">검색</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
                             <td>
                                 <select class="form-select" aria-label="Default select example" name="category">
+                                    <option>호텔 / 다이닝 선택</option>
                                     <option value="hotel">호텔</option>
                                     <option value="dining">다이닝</option>
                                 </select>
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example" name="hotel">
+                                    <option>지점선택</option>
                                     <option value="seoul">서울WY호텔</option>
                                     <option value="busan">부산WY호텔</option>
                                     <option value="jeju">제주WY호텔</option>
@@ -137,6 +134,7 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example" name="capacity">
+                                    <option>인원수</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -145,8 +143,9 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example" name="age">
+                                    <option>연령대</option>
                                     <option value="adult">성인</option>
-                                    <option value="notadult">비성인</option>                                    
+                                    <option value="notadult">미성년</option>
                                 </select>
                             </td>
                             <td>
@@ -156,16 +155,17 @@
                                 <button type="button" class="btn btn-dark">검색</button>
                             </td>
                         </tr>
-                    </tbody>
+                    </thead>
                 </table>
             </form> <!-- end form tag-->
         </div><!-- end fastreservations -->
 
-        <div class="container promotion-wrap"><!-- start promotion -->
+        <div class="container wrapper"><!-- start promotion -->
+            <h3>프로모션</h3>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="./img/apartment-g219363a2e_1920.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
@@ -175,7 +175,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="./img/apartment-g219363a2e_1920.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
@@ -185,7 +185,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="./img/apartment-g219363a2e_1920.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
@@ -195,7 +195,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="./img/apartment-g219363a2e_1920.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
@@ -205,7 +205,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="./img/apartment-g219363a2e_1920.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
@@ -215,7 +215,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="./img/apartment-g219363a2e_1920.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
@@ -225,7 +225,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="./img/apartment-g219363a2e_1920.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
@@ -235,7 +235,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="./img/apartment-g219363a2e_1920.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
@@ -245,7 +245,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 22rem;">
                             <img src="./img/apartment-g219363a2e_1920.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
@@ -256,107 +256,15 @@
                     </div>
                 </div>
             <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>            
             </div>            
         </div> <!-- end promotion -->
-
-        <hr>
-
-        <div class="container carouselPages"> <!-- start carouselPages -->
-            <div class="d-flex align-items-start">  
-                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                  <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">호텔</button>
-                  <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">다이닝</button>                  
-                </div>
-                <div class="tab-content" id="v-pills-tabContent">
-                  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
-                    <div id="carouselHotel" class="carousel slide" data-bs-ride="false">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselHotel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselHotel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselHotel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="./img/hotel-g1568378bd_1920.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>서울 WY호텔</h5>
-                              <p>익숙한 서울에서 특별한 경험을 느끼게 해줍니다</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="./img/bedroom-g8b239c219_1920.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>부산 WY호텔</h5>
-                              <p>말로만 들었던 부산 풀코스를 WY호텔에서!</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="./img/hotel-room-gb5a07122f_1920.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>제주 WY호텔</h5>
-                              <p>한라봉 갈치 오분자기 뚝배기 아 못참지 ㅋㅋㅋ</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHotel" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselHotel" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
-                    <div id="carouselDining" class="carousel slide" data-bs-ride="false">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselDining" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselDining" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselDining" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="./img/hotel-gb9b0d55df_1920.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>풀코스</h5>
-                              <p>부산 풀코스의 진수</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="./img/hotel-g89d6d2350_1920.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>다이닝</h5>
-                              <p>부산다이닝입니다</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="./img/bed-gfc673ab90_1920.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>제주다이닝</h5>
-                              <p>아 제주 다이닝이라고 ㅋㅋㅋㅋ</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDining" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselDining" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div> <!--end carouselPages-->
     </section> <!-- end main -->
 
+
+    <!-- footer.jsp 파일 시작 부분-->
     <!-- footer-->
-    <footer>
+    <footer class="sticky-bottom">
         <div class="container">            
             <div class="row">
                 <div class="col-6">
@@ -367,19 +275,22 @@
                         주소: 서울특별시 마포구 백범로 23 3층 <span>&copy;WY HOTEL. ALL RIGHTS RESERVED</span>
                     </div>
                 </div>
-                <div class="col-6 text-right">
-                    <div class="footer-logo-wrapper">
-                        <a href="#">
-                            <img class="logo-img" src="./img/em_logo.svg" alt="logo" width="100px">
-                        </a>
+                <div class="col-6">
+                    <div class="logo-img">
+                        <img src="./img/em_logo.svg" width="150">
                     </div>
                 </div>
             </div>
         </div>
         <a href="#" class="bi bi-arrow-up-circle topBtn"></a>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
 
+    <!-- footer.jsp 파일 끝 -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
@@ -405,10 +316,5 @@
             });
         });
     </script>
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
-    
-
 </body>
 </html>
