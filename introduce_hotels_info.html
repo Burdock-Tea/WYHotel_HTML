@@ -39,105 +39,48 @@
         .phone_form{ margin: 0;}
         .btn { border-radius: 0;}
         .posi-top{ padding-top: 50px;}
+
+        /*  */
     </style>   
 </head>
 <body>
     
     <!-- nav-->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light box-shodow ">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="navbarColor03">
-                    <!-- logo -->
-                    <a class="navbar-brand" href="#"><img id="logo" src="img/em_logo.svg" alt="logo"></a>
-                    <!-- nav menu -->
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">객실소개
-                                <span class="visually-hidden">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#">프로모션</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">고객센터</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">내예약</a>
-                        </li>
-                        <!-- 드롭다운 이벤트 -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">회원메뉴</a>
-                            <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">로그인</a>
-                            <a class="dropdown-item" href="#">회원가입</a>
-                            </div>
-                        </li>
-
-                    </ul>
-            </div>
-            </div>
-        </nav>
-    </header> <!-- end header -->
+    
 
     <div class="container posi">
-        <!-- Content here -->
+       
         <div class="row">
-            <div class="col-1"></div>
-
-            <div class="col-9">
-                <h4>객실정보</h4>
-                <img src="img/bedroom-g34b59e527_1920.jpg" class="img-fluid" alt="객실사진">
+            <div class="col-12">
+                <!-- 여기는 지도 api가 들어가는 장소입니다 -->
+                <h4>Location</h4>
+                <br>
+                <div id="map" class="mapSize text-bg-danger" style="width: 1200px; height: 500px"></div>
+                
             </div>
+        </div>
             
-        </div> <!-- row end-->
-
         <div class="row posi-top">
             <div class="col-1"></div>
-
-            <div class="col-4">
-                <!-- 여기는 지도 api가 들어가는 장소입니다 -->
-                <div id="map" style="width: 400px; height: 400px;"></div>
-
+            <div class="col-6 ">
+                <h3 class="mb-3">WY HOTEL</h3>
+                <h4 class="mx-4">SEOUL</h4>
             </div>
-
-            <div class="col-5">
-                
-                <h4>제주지점</h4>
+            <div class="col-4">
                 <hr>
                 <!-- 양끝정렬 맞추기 -->
-                <p class="">
-                    모든 국민은 보건에 관하여 국가의 보호를 받는다. 행정각부의 장은 국무위원 중에서 국무총리의 제청으로 대통령이 임명한다. 국회의원이 회기전에 체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다.
-                    대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다. 군인은 현역을 면한 후가 아니면 국무총리로 임명될 수 없다. 대통령·국무총리·국무위원·행정각부의 장·헌법재판소 재판관·법관·중앙선거관리위원회 위원·감사원장·감사위원 기타 법률이 정한 공무원이 그 직무집행에 있어서 헌법이나 법률을 위배한 때에는 국회는 탄핵의 소추를 의결할 수 있다.
-                    국가는 법률이 정하는 바에 의하여 재외국민을 보호할 의무를 진다. 군인·군무원·경찰공무원 기타 법률이 정하는 자가 전투·훈련등 직무집행과 관련하여 받은 손해에 대하여는 법률이 정하는 보상외에 국가 또는 공공단체에 공무원의 직무상 불법행위로 인한 배상은 청구할 수 없다.
-                </p>
-
-                <hr>
                     <p>
-                        주소
+                        <b> 주소 </b>
+                        <span class="ms-5">서울특별시 마포구 백범로 23, 3층 </span>
                     </p>
                     <p>
-                        대표전화
-                    </p>
-                    <p>
-                        홈페이지
+                        <b> 대표전화 </b>
+                        <span class="ms-4"> 02-739-7235 </span>
                     </p>
                 <hr>
-            </div>
-            
         </div> <!-- row end-->
         
     </div>
-
-        
-    
-    
-   
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
